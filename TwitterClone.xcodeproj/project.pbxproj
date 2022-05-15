@@ -16,6 +16,7 @@
 		0AB0EED127C455240019EDE4 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB0EED027C455240019EDE4 /* SearchViewController.swift */; };
 		0AB0EED327C455350019EDE4 /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB0EED227C455350019EDE4 /* NotificationsViewController.swift */; };
 		0AB0EED527C455430019EDE4 /* DirectMessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB0EED427C455430019EDE4 /* DirectMessagesViewController.swift */; };
+		0AC8A297283095CD00C189D7 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC8A296283095CD00C189D7 /* ProfileViewController.swift */; };
 		0AF3AAD9280E468E00AD5F2A /* TweetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF3AAD8280E468E00AD5F2A /* TweetTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		0AB0EED027C455240019EDE4 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		0AB0EED227C455350019EDE4 /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
 		0AB0EED427C455430019EDE4 /* DirectMessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectMessagesViewController.swift; sourceTree = "<group>"; };
+		0AC8A296283095CD00C189D7 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		0AF3AAD8280E468E00AD5F2A /* TweetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -78,6 +80,7 @@
 		0AB0EECC27C454F10019EDE4 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				0AC8A295283095BC00C189D7 /* General */,
 				0AB0EECD27C454F90019EDE4 /* Core */,
 			);
 			path = Controllers;
@@ -93,6 +96,14 @@
 				0AB0EED427C455430019EDE4 /* DirectMessagesViewController.swift */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		0AC8A295283095BC00C189D7 /* General */ = {
+			isa = PBXGroup;
+			children = (
+				0AC8A296283095CD00C189D7 /* ProfileViewController.swift */,
+			);
+			path = General;
 			sourceTree = "<group>";
 		};
 		0AF3AAD7280E467600AD5F2A /* Views */ = {
@@ -179,6 +190,7 @@
 				0AB0EED327C455350019EDE4 /* NotificationsViewController.swift in Sources */,
 				0AB0EEBB27C453E30019EDE4 /* SceneDelegate.swift in Sources */,
 				0AB0EECF27C455180019EDE4 /* HomeViewController.swift in Sources */,
+				0AC8A297283095CD00C189D7 /* ProfileViewController.swift in Sources */,
 				0AB0EED527C455430019EDE4 /* DirectMessagesViewController.swift in Sources */,
 				0AF3AAD9280E468E00AD5F2A /* TweetTableViewCell.swift in Sources */,
 			);
