@@ -36,4 +36,5 @@ class DatabaseManager {
             .tryMap { try $0.data(as: TwitterUser.self) }
             .eraseToAnyPublisher()
     }
+    
 }

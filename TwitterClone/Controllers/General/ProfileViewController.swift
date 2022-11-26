@@ -7,10 +7,12 @@
 
 import UIKit
 
+
+
 class ProfileViewController: UIViewController {
 
     private var isStatusBarHidden: Bool = true
-    
+
     private let statusBar: UIView = {
         let view = UIView()
         view.backgroundColor = .systemBackground
@@ -19,8 +21,10 @@ class ProfileViewController: UIViewController {
         return view
     }()
     
+    
+   
+    
     private let profileTableView: UITableView = {
-       
         let tableView = UITableView()
         tableView.register(TweetTableViewCell.self, forCellReuseIdentifier: TweetTableViewCell.identifier)
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -40,7 +44,6 @@ class ProfileViewController: UIViewController {
         profileTableView.tableHeaderView = headerView
         profileTableView.contentInsetAdjustmentBehavior = .never
         navigationController?.navigationBar.isHidden = true
-        
         configureConstraints()
     }
     
