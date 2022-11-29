@@ -86,7 +86,7 @@ class HomeViewController: UIViewController {
         viewModel.$user.sink { [weak self] user in
             guard let user = user else { return }
             print(user)
-            if user.isUserOnboarded {
+            if !user.isUserOnboarded {
                 self?.completeUserOnboarding()
             }
         }

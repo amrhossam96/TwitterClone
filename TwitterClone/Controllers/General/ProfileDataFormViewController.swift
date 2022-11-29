@@ -147,6 +147,14 @@ class ProfileDataFormViewController: UIViewController {
             self?.submitButton.isEnabled = buttonState
         }
         .store(in: &subscriptions)
+        
+        
+        viewModel.$isOnboardingFinished.sink { [weak self] success in
+            if success {
+                self?.dismiss(animated: true)
+            }
+        }
+        .store(in: &subscriptions)
     }
 
 
@@ -250,6 +258,7 @@ extension ProfileDataFormViewController: UITextViewDelegate, UITextFieldDelegate
     
     func textViewDidChange(_ textView: UITextView) {
         viewModel.bio = textView.text
+        viewModel.validateUserProfileForm()
     }
 
     
