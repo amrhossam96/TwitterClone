@@ -98,7 +98,7 @@ class ProfileDataFormViewController: UIViewController {
         button.setTitle("Submit", for: .normal)
         button.tintColor = .white
         button.titleLabel?.font = .systemFont(ofSize: 16, weight: .bold)
-        button.backgroundColor = UIColor(red: 29/255, green: 161/255, blue: 242/255, alpha: 1)
+        button.backgroundColor = .twitterBlueColor
         button.layer.masksToBounds = true
         button.layer.cornerRadius = 25
         button.isEnabled = false
