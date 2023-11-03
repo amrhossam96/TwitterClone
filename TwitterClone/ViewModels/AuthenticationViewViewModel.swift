@@ -46,6 +46,7 @@ final class AuthenticationViewViewModel: ObservableObject {
             .handleEvents(receiveOutput: { [weak self] user in
                 self?.user = user
             })
+            
             .sink { [weak self] completion in
                 if case .failure(let error) = completion {
                     self?.error = error.localizedDescription
@@ -75,6 +76,7 @@ final class AuthenticationViewViewModel: ObservableObject {
         guard let email = email,
               let password = password else { return }
         AuthManager.shared.loginUser(with: email, password: password)
+            
             .sink { [weak self] completion in
                 
                 if case .failure(let error) = completion {
@@ -84,6 +86,7 @@ final class AuthenticationViewViewModel: ObservableObject {
             } receiveValue: { [weak self] user in
                 self?.user = user
             }
+            
             .store(in: &subscriptions)
 
     }
