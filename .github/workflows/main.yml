@@ -21,10 +21,7 @@ jobs:
         xcode-version: '14.2'
 
     - name: Install dependencies
-      run: |
-        gem install bundler
-        bundle install
-        pod install
+      run:  pod install
 
     - name: Build and Run Tests
       run: |
