@@ -20,9 +20,6 @@ jobs:
       with:
         xcode-version: '14.2'
 
-    - name: Install dependencies
-      run:  pod install
-
     - name: Build and Run Tests
       run: |
         xcodebuild clean build test \
