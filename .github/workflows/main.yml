@@ -15,25 +15,12 @@ jobs:
     - name: Checkout Repository
       uses: actions/checkout@v2
 
-    - name: Set up Xcode
-      uses: actions/setup-xcode@v2
-      with:
-        xcode-version: '14.2'
+    - name: Select Xcode
+      run: sudo xcode-select -switch /Applications/Xcode_13.0.app && /usr/bin/xcodebuild -version
+    - name: Run tests
+      run: xcodebuild test -scheme TwitterClone -project TwitterClone.xcodeproj -destination 'platform=iOS Simulator,name=iPhone 15 Pro,OS=17.0' | xcpretty && exit ${PIPESTATUS[0]}
 
-    - name: Install dependencies
-      run: |
-        gem install bundler
-        bundle install
-        pod install
-
-    - name: Build and Run Tests
-      run: |
-        xcodebuild clean build test \
-          -project TwitterClone.xcodeproj \
-          -scheme TwitterClone \
-          -destination 'platform=iOS Simulator,OS=14.5,name=iPhone 12' \
-          CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO
-
+  
     - name: Generate Code Coverage
       run: |
         xcrun xccov view --json Report.xcresult > coverage.json
