@@ -43,7 +43,7 @@ jobs:
         sonar-scanner \
           -Dsonar.projectKey=amrhossam96_TwitterClone \
           -Dsonar.organization=amrhossam96 \
-          -Dsonar.sources=. \
+          -Dsonar.sources=. TwitterCloneTests \
           -Dsonar.tests=. \
           -Dsonar.test.inclusions=**/*.swift \
           -Dsonar.coverageReportPaths=Coverage.xml \
