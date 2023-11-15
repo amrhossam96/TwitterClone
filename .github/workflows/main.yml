@@ -38,6 +38,7 @@ jobs:
         curl -o sonar-scanner.zip -L https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-4.6.2.2472-macosx.zip
         unzip -o sonar-scanner.zip
         export PATH=$PATH:$(pwd)/sonar-scanner-4.6.2.2472-macosx/bin
+        
 
         sonar-scanner \
           -Dsonar.projectKey=amrhossam96_TwitterClone \
@@ -48,4 +49,7 @@ jobs:
           -Dsonar.coverageReportPaths=Coverage.xml \
           -Dsonar.host.url=https://sonarcloud.io \
           -Dsonar.swift.coverage.reportPaths=coverage.json \
-          -Dsonar.login=${{ secrets.SONAR_TOKEN }}
+          -Dsonar.login=${{ secrets.SONAR_TOKEN }} \
+          -Dsonar.c.file.suffixes=- \
+          -Dsonar.cpp.file.suffixes=- \
+          -Dsonar.objc.file.suffixes=-
