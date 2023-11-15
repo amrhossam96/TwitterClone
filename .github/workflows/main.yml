@@ -20,6 +20,9 @@ jobs:
       with:
         xcode-version: '14.2'
 
+    - name: Install Slather
+      run: gem install slather
+
     - name: Build and Run Tests
       run: |
         xcodebuild clean build test \
@@ -28,6 +31,7 @@ jobs:
           -destination 'platform=iOS Simulator,OS=16.2,name=iPhone 14 Pro' \
           -enableCodeCoverage YES \
           CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO
+        slather coverage --cobertura-xml
 
     - name: Convert Coverage report to SonarCloud Generic format
       run: |
@@ -46,7 +50,7 @@ jobs:
           -Dsonar.sources=. \
           -Dsonar.tests=TwitterCloneTests \
           -Dsonar.test.inclusions=**/*.swift \
-          -Dsonar.coverageReportPaths=Coverage.xml \
+          -Dsonar.coverageReportPaths=coverage/cobertura.xml \
           -Dsonar.host.url=https://sonarcloud.io \
           -Dsonar.swift.coverage.reportPaths=Coverage.xml \
           -Dsonar.token=${{ secrets.SONAR_TOKEN }} \
