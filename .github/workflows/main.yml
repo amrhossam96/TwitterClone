@@ -31,11 +31,7 @@ jobs:
           -destination 'platform=iOS Simulator,OS=16.2,name=iPhone 14 Pro' \
           -enableCodeCoverage YES \
           CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO
-        slather coverage --cobertura-xml --project TwitterClone.xcodeproj
-
-    - name: Convert Coverage report to SonarCloud Generic format
-      run: |
-        bash xccov-to-sonarqube-generic.sh Build/Logs/Test/*.xcresult/ >Coverage.xml
+        slather coverage -s --scheme TwitterClone TwitterClone.xcodeproj
 
     - name: SonarCloud Analysis
       run: |
