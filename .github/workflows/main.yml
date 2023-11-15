@@ -43,13 +43,13 @@ jobs:
         sonar-scanner \
           -Dsonar.projectKey=amrhossam96_TwitterClone \
           -Dsonar.organization=amrhossam96 \
-          -Dsonar.sources=. TwitterCloneTests \
-          -Dsonar.tests=. \
+          -Dsonar.sources=. \
+          -Dsonar.tests=TwitterCloneTests \
           -Dsonar.test.inclusions=**/*.swift \
           -Dsonar.coverageReportPaths=Coverage.xml \
           -Dsonar.host.url=https://sonarcloud.io \
           -Dsonar.swift.coverage.reportPaths=Coverage.xml \
-          -Dsonar.login=${{ secrets.SONAR_TOKEN }} \
+          -Dsonar.token=${{ secrets.SONAR_TOKEN }} \
           -Dsonar.c.file.suffixes=- \
           -Dsonar.cpp.file.suffixes=- \
           -Dsonar.objc.file.suffixes=-
