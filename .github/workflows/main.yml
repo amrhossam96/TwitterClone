@@ -31,8 +31,8 @@ jobs:
           -destination 'platform=iOS Simulator,OS=16.2,name=iPhone 14 Pro' \
           -enableCodeCoverage YES \
           CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO
-        slather coverage -s --scheme TwitterClone TwitterClone.xcodeproj
-
+        slather coverage --sonarqube-xml --scheme TwitterClone TwitterClone.xcodeproj
+        
     - name: SonarCloud Analysis
       run: |
         curl -o sonar-scanner.zip -L https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-5.0.0.2966-macosx.zip
