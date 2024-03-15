@@ -18,6 +18,9 @@
 		0A3E53EB29328A4D00733299 /* ProfileViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3E53EA29328A4D00733299 /* ProfileViewViewModel.swift */; };
 		0A3E53EE29328E3000733299 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 0A3E53ED29328E3000733299 /* SDWebImage */; };
 		0A62924628F8F68E001260E2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A62924528F8F68E001260E2 /* LoginViewController.swift */; };
+		0AA8E8902B9D5DCA00648E14 /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA8E88F2B9D5DCA00648E14 /* SearchResultsViewController.swift */; };
+		0AA8E8922B9D62AF00648E14 /* SearchViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA8E8912B9D62AF00648E14 /* SearchViewViewModel.swift */; };
+		0AA8E8942B9D64E700648E14 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA8E8932B9D64E700648E14 /* UserTableViewCell.swift */; };
 		0AB0EEB927C453E30019EDE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB0EEB827C453E30019EDE4 /* AppDelegate.swift */; };
 		0AB0EEBB27C453E30019EDE4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB0EEBA27C453E30019EDE4 /* SceneDelegate.swift */; };
 		0AB0EEBD27C453E30019EDE4 /* MainTabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB0EEBC27C453E30019EDE4 /* MainTabbarViewController.swift */; };
@@ -88,6 +91,9 @@
 		0A29EA5A28F25602006F92C8 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		0A3E53EA29328A4D00733299 /* ProfileViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewViewModel.swift; sourceTree = "<group>"; };
 		0A62924528F8F68E001260E2 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		0AA8E88F2B9D5DCA00648E14 /* SearchResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsViewController.swift; sourceTree = "<group>"; };
+		0AA8E8912B9D62AF00648E14 /* SearchViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewViewModel.swift; sourceTree = "<group>"; };
+		0AA8E8932B9D64E700648E14 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		0AB0EEB527C453E30019EDE4 /* TwitterClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AB0EEB827C453E30019EDE4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0AB0EEBA27C453E30019EDE4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -200,6 +206,7 @@
 				0AF3F5AB28FCD04C0098B268 /* ProfileDataFormViewViewModel.swift */,
 				0A3E53EA29328A4D00733299 /* ProfileViewViewModel.swift */,
 				0AEB0ECE293D01890006F2C8 /* TweetComposeViewViewModel.swift */,
+				0AA8E8912B9D62AF00648E14 /* SearchViewViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -280,6 +287,7 @@
 				0AC8A296283095CD00C189D7 /* ProfileViewController.swift */,
 				0AF3F5A928FCCF840098B268 /* ProfileDataFormViewController.swift */,
 				0A1B40F5293A3F1500377BEF /* TweetComposeViewController.swift */,
+				0AA8E88F2B9D5DCA00648E14 /* SearchResultsViewController.swift */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -297,6 +305,7 @@
 			children = (
 				0AF3AAD8280E468E00AD5F2A /* TweetTableViewCell.swift */,
 				0ACB15782866B3AC00653436 /* ProfileTableViewHeader.swift */,
+				0AA8E8932B9D64E700648E14 /* UserTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -452,6 +461,7 @@
 				0A1C26D8292ECDDA00AF9494 /* StorageManager.swift in Sources */,
 				0A62924628F8F68E001260E2 /* LoginViewController.swift in Sources */,
 				0AF3F5A628FCC72F0098B268 /* DatabaseManager.swift in Sources */,
+				0AA8E8902B9D5DCA00648E14 /* SearchResultsViewController.swift in Sources */,
 				0AB0EEB927C453E30019EDE4 /* AppDelegate.swift in Sources */,
 				0A3E53EB29328A4D00733299 /* ProfileViewViewModel.swift in Sources */,
 				0A29EA4D28EF23D3006F92C8 /* RegisterViewController.swift in Sources */,
@@ -464,11 +474,13 @@
 				0AF3F5AC28FCD04C0098B268 /* ProfileDataFormViewViewModel.swift in Sources */,
 				0A1B40F4293A3D2800377BEF /* Extension+UIColor.swift in Sources */,
 				0AC8A297283095CD00C189D7 /* ProfileViewController.swift in Sources */,
+				0AA8E8942B9D64E700648E14 /* UserTableViewCell.swift in Sources */,
 				0AB0EED527C455430019EDE4 /* DirectMessagesViewController.swift in Sources */,
 				0ACB15792866B3AC00653436 /* ProfileTableViewHeader.swift in Sources */,
 				0AF3F5AA28FCCF840098B268 /* ProfileDataFormViewController.swift in Sources */,
 				0A29EA4B28EF1F55006F92C8 /* OnboardingViewController.swift in Sources */,
 				0AF3F5A428FCC6200098B268 /* TwitterUser.swift in Sources */,
+				0AA8E8922B9D62AF00648E14 /* SearchViewViewModel.swift in Sources */,
 				0AF3F5A828FCCC530098B268 /* HomeViewViewModel.swift in Sources */,
 				0AF3AAD9280E468E00AD5F2A /* TweetTableViewCell.swift in Sources */,
 			);

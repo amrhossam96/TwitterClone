@@ -25,8 +25,8 @@ class TweetTableViewCell: UITableViewCell {
     weak var delegate: TweetTableViewCellDelegate?
     
     private let actionSpacing: CGFloat = 60
+
     private let avatarImageView: UIImageView = {
-       
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleAspectFill

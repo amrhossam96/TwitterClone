@@ -37,7 +37,9 @@ class DatabaseManager {
             .tryMap { try $0.data(as: TwitterUser.self) }
             .eraseToAnyPublisher()
     }
+
     
+
     
     func collectionUsers(updateFields: [String: Any], for id: String) -> AnyPublisher<Bool, Error> {
         db.collection(usersPath).document(id).updateData(updateFields)
@@ -51,7 +53,19 @@ class DatabaseManager {
             .eraseToAnyPublisher()
     }
     
-    
+
+    func collectionUsers(search query: String) -> AnyPublisher<[TwitterUser], Error> {
+        db.collection(usersPath).whereField("username", isEqualTo: query)
+            .getDocuments()
+            .map(\.documents)
+            .tryMap { snapshots in
+                try snapshots.map({
+                    try $0.data(as: TwitterUser.self)
+                })
+            }
+            .eraseToAnyPublisher()
+    }
+
     func collectionTweets(retreiveTweets forUserID: String) -> AnyPublisher<[Tweet], Error> {
         db.collection(tweetsPath).whereField("author.id", isEqualTo: forUserID)
             .getDocuments()
